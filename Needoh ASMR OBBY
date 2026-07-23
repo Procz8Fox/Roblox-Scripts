@@ -1,0 +1,63 @@
+loadstring([[
+local p=game:GetService"Players".LocalPlayer
+local g=Instance.new"ScreenGui"
+g.Name="Needoh ASMR OBBY"
+g.ResetOnSpawn=false
+g.Parent=p:WaitForChild"PlayerGui"
+local f=Instance.new"Frame"
+f.Size=UDim2.new(0,200,0,85)
+f.Position=UDim2.new(0.5,-100,0.5,-42)
+f.BackgroundColor3=Color3.fromRGB(25,25,35)
+f.Active=true
+f.Draggable=true
+f.Parent=g
+Instance.new("UICorner",f).CornerRadius=UDim.new(0,8)
+Instance.new("UIStroke",f).Color=Color3.fromRGB(0,200,0)
+
+-- Title Bar
+local t=Instance.new"Frame"
+t.Size=UDim2.new(1,0,0,20)
+t.BackgroundColor3=Color3.fromRGB(40,40,50)
+t.Parent=f
+Instance.new("UICorner",t).CornerRadius=UDim.new(0,8)
+local l=Instance.new"TextLabel"
+l.Size=UDim2.new(1,-25,1,0)
+l.Position=UDim2.new(0,5,0,0)
+l.BackgroundTransparency=1
+l.Text="Needoh ASMR OBBY BY PROCZ"
+l.TextColor3=Color3.new(1,1,1)
+l.Font=Enum.Font.GothamBold
+l.TextSize=11
+l.TextXAlignment=Enum.TextXAlignment.Left
+l.TextScaled=true
+l.Parent=t
+local c=Instance.new"TextButton"
+c.Size=UDim2.new(0,20,0,20)
+c.Position=UDim2.new(1,-25,0,0)
+c.BackgroundColor3=Color3.fromRGB(200,50,50)
+c.Text="X"
+c.TextColor3=Color3.new(1,1,1)
+c.Font=Enum.Font.GothamBold
+c.TextSize=16
+c.Parent=t
+Instance.new("UICorner",c).CornerRadius=UDim.new(0,4)
+c.MouseButton1Click:Connect(function()g:Destroy()end)
+
+local b1=Instance.new"TextButton"
+b1.Size=UDim2.new(1,-10,0,35)
+b1.Position=UDim2.new(0,5,0,25)
+b1.BackgroundColor3=Color3.fromRGB(0,150,0)
+b1.Text="TP TO END"
+b1.TextColor3=Color3.new(1,1,1)
+b1.Font=Enum.Font.GothamBold
+b1.TextSize=14
+b1.TextScaled=true
+b1.Parent=f
+Instance.new("UICorner",b1).CornerRadius=UDim.new(0,8)
+b1.MouseButton1Click:Connect(function()
+local c=p.Character
+if c and c:FindFirstChild"HumanoidRootPart"then
+c.HumanoidRootPart.CFrame=CFrame.new(7.8,238.1,768.4)
+end
+end)
+]])()
